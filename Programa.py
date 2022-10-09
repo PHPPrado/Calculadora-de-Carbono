@@ -1,12 +1,16 @@
+#import os
+# os.system('cls')
+
 # Cálculo do consumo de energia----------
 
 # Variáveis----------
 potencia = 850
-horas = int(input("Quantas horas de funcionamento diário? "))
+horas = int(
+    input("Digite a média de horas diárias que a máquina ficará ligada: "))
 dias = 30
 consumoKwhM = (potencia * horas * dias) / 1000  # Equação do consumo
 
-print("O consumo mensal do equipamento será de {}" .format(consumoKwhM))
+print("O consumo mensal do equipamento será de {} Kwh/mês" .format(consumoKwhM))
 
 
 # Cálculo do custo em reais---------
@@ -14,7 +18,7 @@ print("O consumo mensal do equipamento será de {}" .format(consumoKwhM))
 tarifa = 0.68
 custoTotal = consumoKwhM * tarifa  # Valor mensal consumido pela máquina
 
-print("O custo de energia mensal consumida pelo equipamento será de: %2.2f" %
+print("O custo de energia mensal consumida por um equipamento será de: %2.2f" %
       round(custoTotal))
 
 
@@ -35,4 +39,13 @@ while geracaoTotal < consumoKwhM:
     geracaoTotal += energiaGerada
     modulos += 1
 
-print("Serão necessárias {} módulos foltovotaicos" .format(modulos))
+print("Serão necessários {} módulos foltovotaicos para suprir o consumo da mensal da máquina de {} kWh/mês" .format(
+    modulos, consumoKwhM))
+
+# Fator de emissão
+
+fatorEmissao = 0.1264
+carbonoEmitido = (consumoKwhM/1000) * fatorEmissao
+conversaoKwh = carbonoEmitido * 1000
+
+print("Sua emissão proveniente do consumo de {}Kwh/mês, é de {} Kg de carbono.".format(consumoKwhM, conversaoKwh))
