@@ -49,3 +49,29 @@ carbonoEmitido = (consumoKwhM/1000) * fatorEmissao
 conversaoKwh = carbonoEmitido * 1000
 
 print("Sua emissão proveniente do consumo de {}Kwh/mês, é de {} Kg de carbono.".format(consumoKwhM, conversaoKwh))
+
+
+# Compensar emissão por reflorestamento------------
+
+contadorArvores = 0
+arvore = 0
+while arvore <= conversaoKwh:
+    arvore += 7.4
+    contadorArvores += 1
+
+print("Para compensar {} de carbono emitido, é necessário plantar {} árvores" .format(
+    conversaoKwh, contadorArvores))
+
+
+# Calculo de créditos de carbono--------
+
+creditos = 0
+preco = 0
+compensado = 0
+while compensado < conversaoKwh:
+    creditos += 1
+    preco += 3.00
+    compensado += 1000
+
+print("Será necessário a compra de {} créditos de carbono por U${}.".format(
+    creditos, preco))
