@@ -1,0 +1,33 @@
+Ideias sobre o programa:
+
+Deixar as contas em funções, em outro arquivo
+para dps importar para o principal.
+
+Tarifa industrial : tarifa média grupo A
+
+Tarifa residencial : tarifa média grupo B
+
+-----O que está pronto?-----
+
+1. Cálculos de (Consumo, Emissão, Árvores, Créditos, Solar)
+
+2. 
+
+3.
+
+4.
+
+5.
+
+-----O que ainda não está pronto?-----
+
+1. Funções das contas em arquivo separado;
+
+2. Tarifa para industrias;
+
+3. Tarifa para residencial;
+
+4.
+
+5.
+
