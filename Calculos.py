@@ -19,16 +19,18 @@ def potenciaIndustrial(tipoCalculo, potenciaMaquina):
 
     if tipoCalculo == 2:
         if potenciaMaquina == 1:
-            potencia = 1030
+            potencia = 1030  # Valores convertidos em KW
         elif potenciaMaquina == 2:
             potencia = 5.4
         elif potenciaMaquina == 3:
             potencia = 3.2
         elif potenciaMaquina == 4:
-            potencia = int(input("Digite o valor da potência em QuiloWatts: "))
+            potencia = float(
+                input("Digite o valor da potência em Watts: "))
+            potencia /= 1000  # Conversão de watts para Kw
 
         quantMaquinas = int(
-            input("Digite quantas maquinas você tem na sua empresa: "))
+            input("Digite quantas máquinas você tem na sua empresa: "))
 
         horas = int(
             input("Digite a quantidade de horas diárias que as máquinas ficarão ligadas: "))
@@ -36,6 +38,13 @@ def potenciaIndustrial(tipoCalculo, potenciaMaquina):
     consumoMwMes = ((potencia * quantMaquinas) * horas * dias) / \
         1000  # Conversão da potencia em Kwh para Mwh
     return potencia, consumoMwMes, quantMaquinas
+
+
+def tarifaIndustrial(consumoMwhMes):
+
+    conversaoKwh = consumoMwhMes * 1000
+    totalEnergia = conversaoKwh * 0.33  # Total em Kw multiplicado pela tarifa
+    return totalEnergia
 
 
 def modulosFotovoltaicos(consumo, energia):
