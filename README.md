@@ -2,6 +2,7 @@
 
 Sobre o programa: Essa calculadora interativa permite o usuário calcular 
 
+teste teste teste
 
 **Como instalar a calculadora no Windows**
 
