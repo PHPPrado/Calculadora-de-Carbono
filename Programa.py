@@ -21,7 +21,7 @@ if tipoCalculo == 1:
     # Escolher a potencia:
 
     escolhaPotencia = int(input(
-        "Para calcular o seu consumo elétrico, selecione qual das opções melhor\nse encaixa na potência do seu equipamento de mineração:\n\nEquipamento de ALTA potência..........[1]\nEquipamento de MÉDIA potência.........[2]\nEquipamento de BAIXA potência.........[3]\n\nDigite o número correspondente: "))
+        "Para calcular o seu consumo elétrico, selecione qual das opções melhor\nse encaixa na potência do seu equipamento de mineração:\n\nEquipamento de ALTA potência(3000W)..........[1]\nEquipamento de MÉDIA potência(1800W).........[2]\nEquipamento de BAIXA potência(850W).........[3]\n\nDigite o número correspondente: "))
 
     potencia, consumoKwhM = Calculos.potenciaMineradora(
         tipoCalculo, escolhaPotencia)
