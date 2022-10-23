@@ -1,12 +1,39 @@
-def potenciaMineradora(tipoCalculo, potenciaMaquina):
+def tipoCalculo():
+    #escolhaCalculo = input(
+    #"Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: ")
 
-    if tipoCalculo == 1:
-        if potenciaMaquina == 1:
-            potencia = 3000
-        elif potenciaMaquina == 2:
-            potencia = 1800
-        elif potenciaMaquina == 3:
-            potencia = 850
+    try:
+        escolhaCalculo = int(input(
+    "Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: "))
+        while (escolhaCalculo != 1) and (escolhaCalculo != 2):
+            escolhaCalculo = int(input(
+    "Opção incorreta, por favor digite uma opção válida. \n Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: "))
+        return escolhaCalculo
+    except ValueError as error:
+        print("\nOpção inválida, por favor digite uma opção válida\n")
+    return tipoCalculo()
+    
+
+
+def potenciaResidencial(tipoCalculo):
+
+    try:
+        potenciaMaquina = int(input(
+                "Para calcular o seu consumo elétrico, selecione qual das opções melhor\nse encaixa na potência do seu equipamento de mineração:\n\nEquipamento de ALTA potência(3000W)..........[1]\nEquipamento de MÉDIA potência(1800W).........[2]\nEquipamento de BAIXA potência(850W)..........[3]\n\nDigite o número correspondente: "))           
+        if tipoCalculo == 1:
+            if potenciaMaquina == 1:
+                potencia = 3000
+            elif potenciaMaquina == 2:
+                potencia = 1800
+            elif potenciaMaquina == 3:
+                potencia = 850
+            elif (potenciaMaquina > 3) or (potenciaMaquina < 1):
+                print("Digite uma opção válida\n")
+                return potenciaResidencial(tipoCalculo)
+    except ValueError as error:
+        print("Digite uma opção válida\n")
+        return(potenciaResidencial(tipoCalculo))
+  
 
     horas = int(
         input("Digite a quantidade de horas diárias que a máquina ficará ligada: "))
@@ -40,14 +67,19 @@ def potenciaIndustrial(tipoCalculo, potenciaMaquina):
     return potencia, consumoMwMes, quantMaquinas
 
 
-def tarifaIndustrial(consumoMwhMes):
+def tarifaRed(consumokwhM):
+
+    tarifa = consumokwhM * 0.49 #Consumo multiplicado pela tarifa do grupo B
+    return tarifa
+
+def tarifaInd(consumoMwhMes):
 
     conversaoKwh = consumoMwhMes * 1000
     totalEnergia = conversaoKwh * 0.33  # Total em Kw multiplicado pela tarifa
     return totalEnergia
 
 
-def modulosFotovoltaicos(consumo, energia):
+def modFoto(consumo, energia):
     modulos = 0
     geracaoTotal = 0
     while geracaoTotal < consumo:
@@ -56,38 +88,38 @@ def modulosFotovoltaicos(consumo, energia):
     return modulos
 
 
-def calcFatorEmissaoDomestico(consumoKwhM):
+def emissaoDom(consumoKwhM):
     fatorEmissao = 0.1264
     carbonoEmitido = (consumoKwhM/1000) * fatorEmissao
     carbonoKg = carbonoEmitido * 1000
     return carbonoKg
 
 
-def calcFatorEmissaoIndustrial(consumoMwMes):
+def emissaoInd(consumoMwMes):
     fatorEmissao = 0.1264
     carbonoTonelada = consumoMwMes * fatorEmissao
     return carbonoTonelada
 
 
-def quantArvoresQuilos(consumoKwhM):
+def arvKg(consumoKwhM):
     contadorArvores = 0
     arvore = 0
-    while arvore <= calcFatorEmissaoDomestico(consumoKwhM):
+    while arvore <= emissaoDom(consumoKwhM):
         arvore += 7.4
         contadorArvores += 1
     return contadorArvores
 
 
-def quantArvoresToneladas(consumoKwhM):
+def arvTon(consumoKwhM):
     contadorArvores = 0
     arvore = 0
-    while arvore <= calcFatorEmissaoIndustrial(consumoKwhM):
+    while arvore <= emissaoInd(consumoKwhM):
         arvore += 0.0074
         contadorArvores += 1
     return contadorArvores
 
 
-def calculoCreditos(carbonoEmKg):
+def calcCred(carbonoEmKg):
     creditos = 0
     preco = 0
     compensado = 0
@@ -98,7 +130,7 @@ def calculoCreditos(carbonoEmKg):
     return creditos, preco
 
 
-def calculoCreditosTon(carbonoEmToneladas):
+def credTon(carbonoEmToneladas):
     creditos = 0
     preco = 0
     compensado = 0
