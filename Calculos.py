@@ -6,11 +6,14 @@ def tipoCalculo():
         escolhaCalculo = int(input(
     "Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: "))
         while (escolhaCalculo != 1) and (escolhaCalculo != 2):
+            print("_________________________________________________________________________________________________")
             escolhaCalculo = int(input(
-    "Opção incorreta, por favor digite uma opção válida. \n Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: "))
+    "Opção incorreta, por favor digite uma opção válida! \n Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: "))
         return escolhaCalculo
     except ValueError as error:
-        print("\nOpção inválida, por favor digite uma opção válida\n")
+        print("_________________________________________________________________________________________________\n")
+        print("Opção inválida, por favor digite uma opção válida!")
+        print("_________________________________________________________________________________________________\n")
     return tipoCalculo()
     
 
@@ -28,39 +31,102 @@ def potenciaResidencial(tipoCalculo):
             elif potenciaMaquina == 3:
                 potencia = 850
             elif (potenciaMaquina > 3) or (potenciaMaquina < 1):
-                print("Digite uma opção válida\n")
+                print("_________________________________________________________________________________________________\n")
+                print("Digite uma opção válida!")
+                print("_________________________________________________________________________________________________\n")
                 return potenciaResidencial(tipoCalculo)
     except ValueError as error:
-        print("Digite uma opção válida\n")
+        print("_________________________________________________________________________________________________\n")
+        print("Digite uma opção válida!")
+        print("_________________________________________________________________________________________________\n")
         return(potenciaResidencial(tipoCalculo))
-  
 
-    horas = int(
+    try:
+        horas = int(
         input("Digite a quantidade de horas diárias que a máquina ficará ligada: "))
+        if (horas < 0) or (horas > 24):
+            print("_________________________________________________________________________________________________\n")
+            print("Digite uma opção válida!")
+            print("_________________________________________________________________________________________________\n")
+            return potenciaResidencial(tipoCalculo)
+    except ValueError as error:
+        print("_________________________________________________________________________________________________\n")        
+        print("Digite um valor válido!")
+        print("_________________________________________________________________________________________________\n")
+        return potenciaResidencial(tipoCalculo)
     dias = 30
     consumoKwhM = (potencia * horas * dias) / 1000  # Equação do consumo
-    return potencia, consumoKwhM
+    return potencia, consumoKwhM   
 
 
-def potenciaIndustrial(tipoCalculo, potenciaMaquina):
+
+def potenciaIndustrial(tipoCalculo):
+    try:     
+        escolhaPotencia = int(input(
+            "Para calcular o seu consumo elétrico, selecione qual das opções melhor\nse encaixa na potência dos seus equipamentos de mineração:\n\nANTSPACE HK3(with DWT-T) -> (1030 KW de potência)..........[1]\nBitcoin Miner S19 Hydro -> (5451 W de potência)............[2]\nLitecoin Miner L7 -> (3260 W de potência)..................[3]\nInserir potência personalizada.............................[4]\n\nDigite o número correspondente: "))
+    except ValueError as error:
+        print("_________________________________________________________________________________________________\n")        
+        print("Digite um valor válido!")
+        print("_________________________________________________________________________________________________\n")
+        return potenciaIndustrial(tipoCalculo)
 
     if tipoCalculo == 2:
-        if potenciaMaquina == 1:
+        if escolhaPotencia == 1:
             potencia = 1030  # Valores convertidos em KW
-        elif potenciaMaquina == 2:
+        elif escolhaPotencia == 2:
             potencia = 5.4
-        elif potenciaMaquina == 3:
+        elif escolhaPotencia == 3:
             potencia = 3.2
-        elif potenciaMaquina == 4:
-            potencia = float(
+        elif escolhaPotencia == 4:
+            try:
+                potencia = float(
                 input("Digite o valor da potência em Watts: "))
-            potencia /= 1000  # Conversão de watts para Kw
+                if potencia < 1:
+                    print("_________________________________________________________________________________________________\n")        
+                    print("Digite um valor válido!")
+                    print("_________________________________________________________________________________________________\n")
+                    return potenciaIndustrial(tipoCalculo)
+                potencia /= 1000  # Conversão de watts para Kw
+            except ValueError as error:
+                print("_________________________________________________________________________________________________\n")
+                print("Digite uma opção válida!")
+                print("_________________________________________________________________________________________________\n")
+                return potenciaIndustrial(tipoCalculo)
+        elif (escolhaPotencia > 4) or (escolhaPotencia < 1):
+            print("_________________________________________________________________________________________________\n")
+            print("Digite uma opção válida!")
+            print("_________________________________________________________________________________________________\n")
+            return potenciaIndustrial(tipoCalculo)
 
-        quantMaquinas = int(
-            input("Digite quantas máquinas você tem na sua empresa: "))
+        try: 
+            quantMaquinas = int(
+                input("Digite quantas máquinas você tem na sua empresa: "))
+            if quantMaquinas < 1:
+                print("_________________________________________________________________________________________________\n")
+                print("Digite uma opção válida!")
+                print("_________________________________________________________________________________________________\n") 
+                return potenciaIndustrial(tipoCalculo)
+        
+        except ValueError as error:
+            print("_________________________________________________________________________________________________\n")
+            print("Digite uma opção válida!")
+            print("_________________________________________________________________________________________________\n")
+            return potenciaIndustrial(tipoCalculo)
 
-        horas = int(
+        try:
+            horas = int(
             input("Digite a quantidade de horas diárias que as máquinas ficarão ligadas: "))
+            if (horas < 1) or (horas > 24):
+                print("_________________________________________________________________________________________________\n")
+                print("Digite uma quantidade de horas válida!")
+                print("_________________________________________________________________________________________________\n")
+                return potenciaIndustrial(tipoCalculo)
+        except ValueError as error:
+            print("_________________________________________________________________________________________________\n")
+            print("Digite uma opção válida!")
+            print("_________________________________________________________________________________________________\n")
+            return potenciaIndustrial(tipoCalculo)
+            
     dias = 30
     consumoMwMes = ((potencia * quantMaquinas) * horas * dias) / \
         1000  # Conversão da potencia em Kwh para Mwh

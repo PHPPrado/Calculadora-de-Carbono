@@ -1,8 +1,5 @@
 Ideias sobre o programa:
 
-Deixar todas as perguntas em um while, para evitar
-que o usuario digite qualquer coisa.
-
 Tarifa residencial : tarifa média grupo B
 
 -----O que está pronto?-----

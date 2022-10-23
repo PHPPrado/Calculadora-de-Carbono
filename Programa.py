@@ -7,8 +7,6 @@ print("Bem vindo, com este programa você poderá ter acesso aos índices\nde em
 
 
 # Escolher o tipo de cálculo, domestico ou empresarial
-#tipoCalculo = int(input(
-#    "Qual tipo de cálculo você deseja realizar?\n\nMineração doméstica.....................[1]\nMineração para meu empreendimento.......[2]\n\nDigite o número correspondente a sua escolha: "))
 
 tipoCalculo = Calculos.tipoCalculo()
 
@@ -74,19 +72,20 @@ if tipoCalculo == 1:
     print("ou será necessário adquirir {} créditos de carbono por U${}.".format(
         creditos, preco))
 
+    
+    input(" \nDigite qualquer tecla para sair!\n ")
+
 # ------------------------------------------------------------------------------------------------------
 
 # Cálculo para consumo industrial
 elif tipoCalculo == 2:
+
     # Cálculo do consumo de energia (Industrial) ----------
 
     print("\n----Cálculo do consumo de energia de um equipamento de mineração----\n")
 
-    escolhaPotencia = int(input(
-        "Para calcular o seu consumo elétrico, selecione qual das opções melhor\nse encaixa na potência dos seus equipamentos de mineração:\n\nANTSPACE HK3(with DWT-T) -> (1030 KW de potência)..........[1]\nBitcoin Miner S19 Hydro -> (5451 W de potência)............[2]\nLitecoin Miner L7 -> (3260 W de potência)..................[3]\nInserir potência personalizada.............................[4]\n\nDigite o número correspondente: "))
-
     potencia, consumoMwMes, quantMaquinas = Calculos.potenciaIndustrial(
-        tipoCalculo, escolhaPotencia)
+        tipoCalculo)
     print("_________________________________________________________________________________________________")
     print("O consumo mensal de {} equipamento(s) será de {} Mwh/mês" .format(
         quantMaquinas, consumoMwMes))
@@ -94,8 +93,7 @@ elif tipoCalculo == 2:
     # Cálculo do custo em reais (Industrial) ---------
 
     tarifaIndustrial = Calculos.tarifaInd(consumoMwMes)
-    print("Aplicadas as taxas sob o consumo elétrico mensal de {}, será cobrado\no valor de R${} pelo orgão responsável.\n".format(consumoMwMes,
-                                                                                                                                   round(Calculos.tarifaIndustrial(consumoMwMes), 2), tarifaIndustrial))
+    print("Aplicadas as taxas sob o consumo elétrico mensal de {}, será cobrado\no valor de R${} pelo orgão responsável.\n".format(consumoMwMes, round(Calculos.tarifaInd(consumoMwMes), 2), tarifaIndustrial))
 
     # Cálculo da geração de energia fotovoltaica (Industrial)-----------
     print("_________________________________________________________________________________________________")
@@ -137,3 +135,6 @@ elif tipoCalculo == 2:
 
     print("ou será necessário adquirir {} créditos de carbono por U${}.".format(
         creditos, preco))
+    
+
+    input(" \nDigite qualquer tecla para sair!\n ")
