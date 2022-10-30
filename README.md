@@ -1,3 +1,7 @@
+<h1>Pré-requisitos:</h1>
+
+---
+
 <h1>Manual de Instalação: </h1>
 
 Nosso software pode ser instalado por qualquer maquina que possua um prompt de comandos, pois é a partir dele que nosso programa executa suas tarefas. Para instalação deste conjunto de arquivos é nescessario um armazenamento livre de 6MB, álem da necessidade de possuir um executavel que neste caso pode ser o prompt de comando ou console do Python.
