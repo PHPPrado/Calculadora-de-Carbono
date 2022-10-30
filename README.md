@@ -1,4 +1,4 @@
-<h1>Pré-requisitos:</h1>
+<h1>Pré-requisitos: </h1>
 
 ---
 
