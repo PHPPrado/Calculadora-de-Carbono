@@ -4,6 +4,8 @@
 
 - Prompt de comando ou console do Python.
 - Nescessario ter no minímo 6MB livres no sistema para o executavel operar corretamente.
+- Requisitos de Hardware: Processador minímo Intel® Pentium® G620 em diante, HD minimo Hd 160gb Interface em diante. 
+- Caso queira verificar o codigo fonte você pode obter esta informação com um editor de texto personalizado (IDE) como o VSCode, IDLE Python e Pycharm.
 
 <h1>Manual de Instalação: </h1>
 
