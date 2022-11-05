@@ -1,7 +1,3 @@
-Ideias sobre o programa:
-
-Tarifa residencial : tarifa média grupo B
-
 -----O que está pronto?-----
 
 1. Cálculos de (Consumo, Emissão, Árvores, Créditos, Solar)
@@ -12,15 +8,17 @@ Tarifa residencial : tarifa média grupo B
 
 4. Escolha potência industrial
 
-5. Tarifa Industrial
+5. Tarifas
+
+6. Tratamento
 
 -----O que ainda não está pronto?-----
 
-1. Funções das contas em arquivo separado (quase pronto);
+1. 
 
-2. Tarifa para residencial;
+2. 
 
-3. Tratamento do código
+3.
 
 4. 
 
