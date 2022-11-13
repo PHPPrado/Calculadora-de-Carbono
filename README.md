@@ -18,7 +18,7 @@
 
 - 2°b: Para quem não possui um descompactador nativo da Sansumg, fara o processo pelo <b>7-Zip</b>: Com o 7-Zip aberto, clique duas vezes em computador, logo apos clique duas vezes em C:, em seguida clique duas vezes em Users, logo em seguida clique duas vezes no nome do seu computador, logo apos procure a pasta downloads e clique nela duas vezes, feito este processo procure o arquivo compactado e clique apenas uma vez nele, em seguida clique na parte superior esquerda com o nome "extrair" e aparecerá uma nova janela com algumas confirmações, para extrair na pasta downloads clique no botão na parte superior direita escrito como "...", abrirá mais uma janela com as pastas para extração clique em "este computador", procure pela pasta downloads e a clique duas vezes, apos isto é so clicar no botão "ok" na parte inferior direita da mesma janela que estará direcionado para fazer a extração no local correto, logo em seguida clique novamente no botão "ok" da janela de extração principal para iniciar a descompactação na pasta downloads.
 
-- 3°: O terceiro passo é encontrar o arquivo para fazer sua execução. Provavelmente ele se encontrará em explorador de arquivos na aba de downloads e, apos isto é so entrar em nossa pasta e clicar em programa.
+- 3°: Com o arquivo descompactado, procure no explorador de arquivos pela pasta "Calculadora-de-Carbono-main" e clique duas vezes nesta pasta, após este processo clique duas vezes na pasta "Calculadora de Carbono", e para executar o programa clique duas vezes em "Calculadora de Carbono" com o icone do Pydroid do Pycharm.
 
 **Como instalar a calculadora no Linux**
 
