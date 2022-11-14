@@ -1,30 +1,55 @@
-<h1>Pré-requisitos: </h1>
+# Pré-requisitos:
 
-É nescessario para a calculadora de carbono, ser executada de seu dispositivo local, de dois possiveis consoles para leitura dos codigos inseridos, entre eles:
+São pré-requisitos mínimos para execução da aplicação no codespace do Github:
 
-- Prompt de comando ou console do Python.
-- Nescessario ter no minímo 6MB livres no sistema para o executavel operar corretamente.
-- Requisitos de Hardware: Processador minímo Intel® Pentium® G620 em diante, HD minimo Hd 160gb Interface em diante. 
-- Caso queira verificar o codigo fonte você pode obter esta informação com um editor de texto personalizado (IDE) como o VSCode, IDLE Python e Pycharm.
-- Nescessario para descompactar o arquivo, programas como 7-Zip ou descompactadores nativos da Sansumg.
+- Computador com acesso a internet;
 
-<h1>Manual de Instalação: </h1>
+- Utilizar um navegador de sua preferência, recomendamos as versões mais recentes do Google Chrome, Firefox ou Edge.
 
-**Como instalar a calculadora no Windows**
+---
 
-- 1°: O primeiro passo é fazer o download do projeto pela plataforma do Github, primeiramente na pagina do projeto clique em Code e em seguida clique em download ZIP.
+## Requisitos e pré-requisitos para a intalação via windows do executável:
 
-- 2°a: O segundo passo é descompactar o programa, pelo descompactador nativo: primeiramente abra o explorador de arquivos, logo em seguida vá para a aba de downloads e procure o arquivo compactado. Apos encontra-lo clique com o botão esquerdo apenas uma vez no arquivo, e outra vez com o botão direito no arquivo, então aparecerá uma janela com varias opçôes, clique em extrair aqui e apos terminado o processo de descompactação será exibido o arquivo com o icone de pasta e descompactado acima do arquivo compactado.
+- Prompt de comando ou console do Python;
 
-- 2°b: Para quem não possui um descompactador nativo da Sansumg, fara o processo pelo <b>7-Zip</b>: Com o 7-Zip aberto, clique duas vezes em computador, logo apos clique duas vezes em C:, em seguida clique duas vezes em Users, logo em seguida clique duas vezes no nome do seu computador, logo apos procure a pasta downloads e clique nela duas vezes, feito este processo procure o arquivo compactado e clique apenas uma vez nele, em seguida clique na parte superior esquerda com o nome "extrair" e aparecerá uma nova janela com algumas confirmações, para extrair na pasta downloads clique no botão na parte superior direita escrito como "...", abrirá mais uma janela com as pastas para extração clique em "este computador", procure pela pasta downloads e a clique duas vezes, apos isto é so clicar no botão "ok" na parte inferior direita da mesma janela que estará direcionado para fazer a extração no local correto, logo em seguida clique novamente no botão "ok" da janela de extração principal para iniciar a descompactação na pasta downloads.
+- Necessário ter no minímo 6MB livres no sistema para o executavel operar corretamente;
 
-- 3°: Com o arquivo descompactado, procure no explorador de arquivos pela pasta "Calculadora-de-Carbono-main" e clique duas vezes nesta pasta, após este processo clique duas vezes na pasta "Calculadora de Carbono", e para executar o programa clique duas vezes em "Calculadora de Carbono" com o icone do Pydroid do Pycharm.
+- Requisitos de Hardware: Processador Intel® Pentium® G620 e superiores, HD 160gb Interface e superiores;
 
-**Como instalar a calculadora no Linux**
+- Caso queira verificar o codigo fonte você pode obter esta informação com um editor de texto personalizado (IDE) como o VSCode, IDLE Python ou Pycharm;
 
-...
+- Necessário para descompactar o arquivo, programas como 7-Zip ou descompactadores nativos.
 
-**Como instalar a calculadora no MAC**
+## Manual de instalação do executável via Windows:
 
-...
+- Acesse o link: [Calculadora de Carbono](https://github.com/PHPPrado/Calculadora-de-Carbono)
 
+- 1º Passo: Faça login na sua conta do GitHub;
+
+- 2º Passo: No repositório, clique em "Code" e logo em seguida clique em Download ZIP;
+
+- 3º Passo: Caminhe até o explorador de arquivos do seu computador e descompacte o arquivo baixado;
+
+- 4º Passo: Clique na pasta descompactada "Calculadora-de-carbono-main"
+
+- 5° Passo: Navegue até a pasta "Calculadora de Carbono";
+
+- 6° Passo: Por fim, execute o aplicativo "Calculadora de Carbono.exe".
+
+---
+
+## Manual de uso da aplicação via navegador
+
+- Acesse o link: [Calculadora de Carbono](https://github.com/PHPPrado/Calculadora-de-Carbono)
+
+- 1° Passo: Faça login na sua conta do GitHub;
+
+- 2° Passo: No repositório, clique em "Code" e logo em seguida clique em "Codespaces";
+
+- 3° Passo: Clique em "Create codespace on main";
+
+- 4° Passo: Dentro da interface de edição de código utilize o atalho CTRL + SHIFT + X (ou correspondente no mac) para acessar a aba de extensões, pesquise por "Python" e clique em instalar;
+
+- 5° Passo: Após a instalação, com o atalho CTRL + SHIFT + E (ou correspondente no mac) retorne a aba explorador e clique no arquivo "Programa.py";
+
+- 6° Passo: Por último, clique no botão "play" posicionado no canto superior direito.
